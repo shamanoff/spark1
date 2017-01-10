@@ -24,7 +24,7 @@ public class Spark1ApplicationTests {
     @Test
     public void textLoad() throws Exception{
 
-        List<String> list = Arrays.asList("Java the java the java the");
+        List<String> list = Arrays.asList("Java the java", "the java the");
         JavaRDD<String> rdd = sc.parallelize(list);
         int sum = superService.sumWords(rdd);
         Assert.assertEquals(6, sum);
